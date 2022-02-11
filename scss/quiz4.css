@@ -10789,15 +10789,6 @@ button.close {
           box-sizing: border-box;
 }
 
-i {
-  text-decoration: none;
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-}
-
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
@@ -10846,36 +10837,43 @@ header {
   font-size: 3rem;
 }
 
-nav {
-  text-align: center;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
 }
 
-nav a {
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
   text-decoration: none;
   color: #fff;
-  display: inline-block;
-  padding: 1em 2em;
-  display: -moz-inline-grid;
+  display: block;
+  padding: 1rem 2rem;
 }
 
-nav ul {
-  display: -moz-inline-grid;
-}
-
-ul {
-  display: -moz-inline-grid;
-}
-
-.menu {
-  display: -moz-inline-grid;
-}
-
-#toggle {
+nav ul li ul {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
   display: none;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
-#hamburger {
-  display: none;
+nav ul li ul li a {
+  color: #333 !important;
+  display: block;
+}
+
+nav ul li:hover ul {
+  display: block;
 }
 
 .padding {
@@ -10941,5 +10939,32 @@ footer {
   font-size: 1.4em;
   cursor: pointer;
   padding: 2px;
+}
+
+#toggle, .fa-bars {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  nav {
+    z-index: 100;
+  }
+  nav ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 100%;
+    left: 0;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .fa-bars {
+    display: block !important;
+  }
+  #toggle:checked + ul {
+    max-height: 300px;
+  }
 }
 /*# sourceMappingURL=quiz4.css.map */

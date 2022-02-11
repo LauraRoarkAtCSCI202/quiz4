@@ -14,18 +14,32 @@
         <div class="container">
             <!-- logo -->
             <div class="logo">LOGO</div>
-            <nav>
-                <!-- dropdown -->
-                <div class="hamburger">
-                <label class="label" for="toggle"><i  class="fas fa-bars"></i></label>
-                </div>
-                <input type="checkbox" id="toggle" >
-                <ul class="menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact</a>
+            <nav class="menu">
+                <label class="label" for="toggle"><i class="fas fa-bars"></i></label>
+                <input id="toggle" class="toggle" type="checkbox">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a>
+                    <!-- drop down -->
+                    <ul>
+                        <li>
+                            <a href="">CEO</a>
+                            <a href="">CIO</a>
+                            <a href="">Invest</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="serivces.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a>
+                        <ul>
+                            <li>
+                                <a href="">CEO</a>
+                                <a href="">CIO</a>
+                                <a href="">Invest</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -131,14 +145,10 @@
 
             Copyright Your Email. All Rights Reserve.
             <div class="social">
-            
-                <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
-            
-                <a href="instagram.com"><i class="fab fa-instagram"></i></a>
-            
-                <a href="twitter.com"><i class="fab fa-twitter"></i></a>
-            
-                <a href="linkin.com"><i class="fab fa-linkedin-in"></i></a>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
             </div>
         </div><!-- container -->
     </footer><!-- footer -->
